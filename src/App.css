@@ -1,38 +1,77 @@
-.App {
-  text-align: center;
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
+.FotoManager {
+  position: relative;
+  width: 900px;
+  margin: 0 auto;
+  margin-top: 50px;
+}
+
+.FotoManager__input {
+  width: 900px;
+  height: 200px;
+  border-radius: 14px;
+  box-sizing: border-box;
+}
+
+.FotoManager__click {
+  position: absolute;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 900px;
+  height: 200px;
+  box-sizing: border-box;
+  border: 2px solid rgb(255, 174, 0);
+  border-radius: 14px;
+  background-color: #006363;
+  background: linear-gradient(45deg, #006363, #1D7373, #006363);
+  color: aliceblue;
+  font-size: 22px;
   pointer-events: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.FotoManager__uploaded {
   display: flex;
-  flex-direction: column;
   align-items: center;
+  flex-wrap: wrap;
+  margin-top: 50px;
+}
+
+.FotoManager__container {
+  position: relative;
+}
+
+.FotoManager__container:nth-child(3n+2) {
+  margin: 0 75px;
+}
+
+.FotoManager__image {
+  width: 250px;
+  max-height: 250px;
+  margin-bottom: 20px;
+}
+
+.FotoManager__delete {
+  position: absolute;
+  top: -15px;
+  right: -15px;
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  border: 2px solid rgb(255, 174, 0);
+  border-radius: 50%;
+  box-sizing: border-box;
+  background-color: aliceblue;
+  cursor: pointer;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.FotoManager__delete::after {
+  content: '✖';
+  font-size: 20px;
 }
